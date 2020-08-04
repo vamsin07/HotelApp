@@ -1,0 +1,23 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$secondary-primary: mat-palette($mat-green, 200);
+$secondary-accent:  mat-palette($mat-red, 50);
+
+$secondary-warn:    mat-palette($mat-red);
+
+
+$secondary-theme: mat-light-theme((
+  color: (
+    primary: $secondary-primary,
+    accent: $secondary-accent,
+    warn: $secondary-warn,  
+  )
+));
+
+@include angular-material-theme($secondary-theme);
+
+.navtabs-container {
+  background-color: mat-color($secondary-primary);
+}

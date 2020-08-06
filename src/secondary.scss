@@ -1,39 +1,40 @@
 @import '~@angular/material/theming';
 
+
 @include mat-core();
 
 
 $second-primary: (
-
-    50 : #93c47d,
-    100 : #c5cae9,
-    200 : #9fa8da,
-    300 : #7986cb,
-    400 : #5c6bc0,
-    500 : #3f51b5,
-    600 : #3949ab,
-    700 : #303f9f,
-    800 : #283593,
-    900 : #1a237e,
-    A100 : #8c9eff,
-    A200 : #536dfe,
-    A400 : #3d5afe,
-    A700 : #304ffe,
+  50 : #fffaed,
+    100 : #fff4d1,
+    200 : #ffecb3,
+    300 : #ffe494,
+    400 : #ffdf7d,
+    500 : #ffd966,
+    600 : #ffd55e,
+    700 : #ffcf53,
+    800 : #ffca49,
+    900 : #ffc038,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #fff5e1,
+    A700 : #ffedc8,
     contrast: (
         50 : #000000,
         100 : #000000,
         200 : #000000,
-        300 : #ffffff,
-        400 : #ffffff,
-        500 : #ffffff,
-        600 : #ffffff,
-        700 : #ffffff,
-        800 : #ffffff,
-        900 : #ffffff,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
         A100 : #000000,
-        A200 : #ffffff,
-        A400 : #ffffff,
-        A700 : #ffffff,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+
   )
 );
 
@@ -74,8 +75,8 @@ $second-accent : (
 
 
 
-$secondary-primary: mat-palette($second-primary, 200, 300, 400);
-$secondary-accent:  mat-palette($second-accent, 200);
+$secondary-primary: mat-palette($second-primary, 300);
+$secondary-accent:  mat-palette($second-primary, 200);
 
 $secondary-warn:    mat-palette($mat-red);
 
@@ -97,39 +98,11 @@ $secondary-theme: mat-light-theme((
 
 
 
-$custom-topography: mat-typography-config(
-  $font-family:   'Rubik, sans-serif',
-  $display-4:     mat-typography-level(112px, 112px, 300),
-  $display-3:     mat-typography-level(56px, 56px, 400),
-  $display-2:     mat-typography-level(45px, 48px, 400),
-  $display-1:     mat-typography-level(34px, 40px, 400),
-  $headline:      mat-typography-level(97.54px, 0px, 400),
-  $title:         mat-typography-level(60.96px, 0px, 400),
-  $subheading-2:  mat-typography-level(48.77px, 0.25px, 400),
-  $subheading-1:  mat-typography-level(34.54px, 0.25px, 400),
-  $body-2:        mat-typography-level(14.22px, 0.25px, 500),
-  $body-1:        mat-typography-level(16.26px, 0.5px, 400),
-  $caption:       mat-typography-level(12px, 1.25px, 400),
-  $button:        mat-typography-level(14.22px, 1.25px, 500),
-  // Line-height must be unit-less fraction of the font-size.
-  $input:         mat-typography-level(inherit, 1.125, 400)
-);
-
-// Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
-@include mat-base-typography($custom-typography);
-
-// Override typography for a specific Angular Material components.
-@include mat-checkbox-typography($custom-typography);
-
-// Override typography for all Angular Material, including mat-base-typography and all components.
-@include angular-material-typography($custom-typography);
-
-@include mat-core($custom-typography);
 
 .mat-list-option:hover,
 .mat-list-option.mat-list-item-focus,
 .mat-nav-list .mat-list-item:hover,
 .mat-nav-list .mat-list-item.mat-list-item-focus {
-  background-color: mat-color($secondary-accent, 300);
-  color: mat-color($secondary-primary, 300);
+  background-color: mat-color($secondary-primary, 300);
+  color: mat-color($secondary-primary, 200);
 }
